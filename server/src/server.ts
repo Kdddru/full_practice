@@ -1,5 +1,7 @@
 import express from 'express'
 
+const port = process.env.PORT || 3000;
+
 
 const app = express();
 
@@ -11,6 +13,6 @@ app.get('/',(req, res)=>{
   res.sendFile(__dirname + '/build/index.html')
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
   console.log('server is running')
 })
